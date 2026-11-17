@@ -24,25 +24,26 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, macos-15-intel, ubuntu-latest, ubuntu-24.04-arm]
+        # Apple-silicon runners often aren't handed out at all (capacity), so macOS is tested on
+        # Intel; the binary is universal, and lipo checks that the arm64 half is there.
+        os: [macos-15-intel, ubuntu-latest, ubuntu-24.04-arm]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: Homebrew/actions/setup-homebrew@main
       - run: brew install akevdev/tap/akev
       - run: brew test akevdev/tap/akev
       - run: akev --version
+      - if: runner.os == 'macOS'
+        run: lipo -archs "$(brew --prefix)/bin/akev" | tee /dev/stderr | grep -qw arm64
       - run: brew uninstall akevdev/tap/akev
 
   cask:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [macos-15-intel, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-15-intel
     steps:
       - uses: Homebrew/actions/setup-homebrew@main
       - run: brew install --cask akevdev/tap/akev-desktop
       - run: ls -la /Applications/Akev.app/Contents/MacOS/
+      - run: for f in /Applications/Akev.app/Contents/MacOS/*; do lipo -archs "$f" | tee /dev/stderr | grep -qw arm64; done
       - run: codesign -dv /Applications/Akev.app 2>&1 | head -5 || true
       - run: brew uninstall --cask akevdev/tap/akev-desktop
       - run: test ! -e /Applications/Akev.app

@@ -1,0 +1,277 @@
+﻿2026-11-17T17:52:30.0868947Z Current runner version: '2.338.2'
+2026-11-17T17:52:30.1056483Z ##[group]Runner Image Provisioner
+2026-11-17T17:52:30.1057404Z Hosted Compute Agent
+2026-11-17T17:52:30.1058007Z Version: 20261103.629
+2026-11-17T17:52:30.1058655Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-17T17:52:30.1059407Z Build Date: 2026-11-03T17:26:59Z
+2026-11-17T17:52:30.1060068Z Worker ID: {d65d9831-ff01-47de-835c-91f4b03f1c9b}
+2026-11-17T17:52:30.1060765Z Region: westus2
+2026-11-17T17:52:30.1061297Z Cloud: Azure
+2026-11-17T17:52:30.1061820Z ##[endgroup]
+2026-11-17T17:52:30.1063234Z ##[group]Operating System
+2026-11-17T17:52:30.1063893Z Microsoft Windows Server 2025
+2026-11-17T17:52:30.1064540Z 10.0.26100
+2026-11-17T17:52:30.1065032Z Datacenter
+2026-11-17T17:52:30.1065535Z ##[endgroup]
+2026-11-17T17:52:30.1066648Z ##[group]Runner Image
+2026-11-17T17:52:30.1067228Z Image: windows-2025-vs2026
+2026-11-17T17:52:30.1067838Z Version: 20261103.298.1
+2026-11-17T17:52:30.1069327Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261103.298/images/windows/Windows2025-VS2026-Readme.md
+2026-11-17T17:52:30.1070986Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261103.298
+2026-11-17T17:52:30.1071917Z ##[endgroup]
+2026-11-17T17:52:30.1073005Z ##[group]GITHUB_TOKEN Permissions
+2026-11-17T17:52:30.1074925Z Contents: read
+2026-11-17T17:52:30.1075581Z Metadata: read
+2026-11-17T17:52:30.1076116Z ##[endgroup]
+2026-11-17T17:52:30.1078256Z Secret source: Actions
+2026-11-17T17:52:30.1079211Z Cache mode: write
+2026-11-17T17:52:30.1079916Z Prepare workflow directory
+2026-11-17T17:52:30.1990719Z Prepare all required actions
+2026-11-17T17:52:30.2046144Z Getting action download info
+2026-11-17T17:52:30.5265596Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-17T17:52:30.7857624Z Complete job name: winget (x64)
+2026-11-17T17:52:30.9533603Z ##[group]Run actions/checkout@v4
+2026-11-17T17:52:30.9534637Z with:
+2026-11-17T17:52:30.9535116Z   repository: akevdev/chocolatey-packages
+2026-11-17T17:52:30.9538871Z   token: ***
+2026-11-17T17:52:30.9539280Z   ssh-strict: true
+2026-11-17T17:52:30.9539696Z   ssh-user: git
+2026-11-17T17:52:30.9540121Z   persist-credentials: true
+2026-11-17T17:52:30.9540583Z   clean: true
+2026-11-17T17:52:30.9541005Z   sparse-checkout-cone-mode: true
+2026-11-17T17:52:30.9541506Z   fetch-depth: 1
+2026-11-17T17:52:30.9541906Z   fetch-tags: false
+2026-11-17T17:52:30.9542329Z   show-progress: true
+2026-11-17T17:52:30.9542753Z   lfs: false
+2026-11-17T17:52:30.9543142Z   submodules: false
+2026-11-17T17:52:30.9543572Z   set-safe-directory: true
+2026-11-17T17:52:30.9544059Z   allow-unsafe-pr-checkout: false
+2026-11-17T17:52:30.9545221Z env:
+2026-11-17T17:52:30.9545678Z   MANIFEST: winget\manifests\a\Akev\Akev
+2026-11-17T17:52:30.9546216Z ##[endgroup]
+2026-11-17T17:52:31.1188319Z Syncing repository: akevdev/chocolatey-packages
+2026-11-17T17:52:31.1193666Z ##[group]Getting Git version info
+2026-11-17T17:52:31.1196000Z Working directory is 'D:\a\chocolatey-packages\chocolatey-packages'
+2026-11-17T17:52:31.2122712Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-17T17:52:31.5685619Z git version 2.56.0.windows.4
+2026-11-17T17:52:31.5741383Z ##[endgroup]
+2026-11-17T17:52:31.5761112Z Temporarily overriding HOME='D:\a\_temp\51c87227-85ce-494f-9ede-f3bd3a1b8172' before making global git config changes
+2026-11-17T17:52:31.5762543Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-17T17:52:31.5772961Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\chocolatey-packages\chocolatey-packages
+2026-11-17T17:52:31.6671757Z Deleting the contents of 'D:\a\chocolatey-packages\chocolatey-packages'
+2026-11-17T17:52:31.6677698Z ##[group]Initializing the repository
+2026-11-17T17:52:31.6686957Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\chocolatey-packages\chocolatey-packages
+2026-11-17T17:52:31.7590701Z Initialized empty Git repository in D:/a/chocolatey-packages/chocolatey-packages/.git/
+2026-11-17T17:52:31.7644813Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/akevdev/chocolatey-packages
+2026-11-17T17:52:31.8410239Z ##[endgroup]
+2026-11-17T17:52:31.8411517Z ##[group]Disabling automatic garbage collection
+2026-11-17T17:52:31.8418545Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-17T17:52:31.8816738Z ##[endgroup]
+2026-11-17T17:52:31.8817951Z ##[group]Setting up auth
+2026-11-17T17:52:31.8828903Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-17T17:52:31.9235714Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-17T17:52:33.4889234Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-17T17:52:33.5292360Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-17T17:52:34.1066430Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-17T17:52:34.1460726Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-17T17:52:34.7462639Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-17T17:52:34.7859138Z ##[endgroup]
+2026-11-17T17:52:34.7860028Z ##[group]Fetching the repository
+2026-11-17T17:52:34.7875018Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f3edf7df6b6b494ffe48c9e095ad452fa4d5570d:refs/remotes/origin/main
+2026-11-17T17:52:35.8048452Z From https://github.com/akevdev/chocolatey-packages
+2026-11-17T17:52:35.8049349Z  * [new ref]         f3edf7df6b6b494ffe48c9e095ad452fa4d5570d -> origin/main
+2026-11-17T17:52:35.8093557Z ##[endgroup]
+2026-11-17T17:52:35.8094225Z ##[group]Determining the checkout info
+2026-11-17T17:52:35.8095728Z ##[endgroup]
+2026-11-17T17:52:35.8105245Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-17T17:52:35.8686368Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-17T17:52:35.9071064Z ##[group]Checking out the ref
+2026-11-17T17:52:35.9084595Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-11-17T17:52:35.9760439Z Switched to a new branch 'main'
+2026-11-17T17:52:35.9857201Z branch 'main' set up to track 'origin/main'.
+2026-11-17T17:52:35.9906782Z ##[endgroup]
+2026-11-17T17:52:36.0409496Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-17T17:52:36.0778239Z f3edf7df6b6b494ffe48c9e095ad452fa4d5570d
+2026-11-17T17:52:36.1206913Z ##[group]Run Install-PSResource -Name Microsoft.WinGet.Client -TrustRepository -Scope AllUsers -Quiet
+2026-11-17T17:52:36.1207852Z [36;1mInstall-PSResource -Name Microsoft.WinGet.Client -TrustRepository -Scope AllUsers -Quiet[0m
+2026-11-17T17:52:36.1208387Z [36;1mImport-Module Microsoft.WinGet.Client[0m
+2026-11-17T17:52:36.1208851Z [36;1m# Windows Server images can't take the App Installer bundle (0x80073CF1); keep the[0m
+2026-11-17T17:52:36.1209278Z [36;1m# preinstalled winget there.[0m
+2026-11-17T17:52:36.1209724Z [36;1mtry { Repair-WinGetPackageManager -AllUsers -Latest -Force -ErrorAction Stop }[0m
+2026-11-17T17:52:36.1210248Z [36;1mcatch { Write-Warning "Couldn't update winget: $_" }[0m
+2026-11-17T17:52:36.1210568Z [36;1mwinget --version[0m
+2026-11-17T17:52:36.1854204Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-17T17:52:36.1854670Z env:
+2026-11-17T17:52:36.1854906Z   MANIFEST: winget\manifests\a\Akev\Akev
+2026-11-17T17:52:36.1855283Z ##[endgroup]
+2026-11-17T17:53:11.9373101Z [33;1mWARNING: Couldn't update winget: Deployment failed with HRESULT: 0x80073CF1, Package was not found.
+2026-11-17T17:53:11.9374248Z 
+2026-11-17T17:53:11.9376319Z Unable to install bundle C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_2025.926.104.0_neutral_~_8wekyb3d8bbwe\AppxMetadata\AppxBundleManifest.xml because it does not have an appropriate application package for x64 architecture.
+2026-11-17T17:53:11.9378681Z 
+2026-11-17T17:53:11.9379996Z NOTE: For additional information, look for [ActivityId] 1c620c88-64fa-0000-ef3c-b826bc76dd01 in the Event Log or use the command line Get-AppPackageLog -ActivityID 1c620c88-64fa-0000-ef3c-b826bc76dd01
+2026-11-17T17:53:11.9382126Z [0m
+2026-11-17T17:53:12.0866274Z v1.29.380
+2026-11-17T17:53:12.1942943Z ##[group]Run $dir = (Get-ChildItem $env:MANIFEST -Directory | Select-Object -First 1).FullName
+2026-11-17T17:53:12.1943725Z [36;1m$dir = (Get-ChildItem $env:MANIFEST -Directory | Select-Object -First 1).FullName[0m
+2026-11-17T17:53:12.1944201Z [36;1m"MANIFEST_DIR=$dir" >> $env:GITHUB_ENV[0m
+2026-11-17T17:53:12.1944543Z [36;1m$out = winget validate --manifest $dir | Out-String[0m
+2026-11-17T17:53:12.1944836Z [36;1m$out[0m
+2026-11-17T17:53:12.1945204Z [36;1m# Warnings return a non-zero code too; only a failed validation should fail the job.[0m
+2026-11-17T17:53:12.1945722Z [36;1mif ($out -notmatch 'Manifest validation succeeded') { exit 1 }[0m
+2026-11-17T17:53:12.2037376Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-17T17:53:12.2037948Z env:
+2026-11-17T17:53:12.2038278Z   MANIFEST: winget\manifests\a\Akev\Akev
+2026-11-17T17:53:12.2038667Z ##[endgroup]
+2026-11-17T17:53:12.8405594Z Manifest validation succeeded.
+2026-11-17T17:53:12.8405968Z 
+2026-11-17T17:53:12.9276987Z ##[group]Run winget settings --enable LocalManifestFiles
+2026-11-17T17:53:12.9277488Z [36;1mwinget settings --enable LocalManifestFiles[0m
+2026-11-17T17:53:12.9278237Z [36;1mwinget install --manifest $env:MANIFEST_DIR --silent --accept-package-agreements --accept-source-agreements --disable-interactivity --verbose-logs[0m
+2026-11-17T17:53:12.9279003Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-11-17T17:53:12.9279620Z [36;1m$arp = Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue |[0m
+2026-11-17T17:53:12.9280204Z [36;1m  Where-Object DisplayName -eq 'Akev'[0m
+2026-11-17T17:53:12.9280597Z [36;1mif (-not $arp) { throw 'No per-user Akev entry in Programs and Features' }[0m
+2026-11-17T17:53:12.9281240Z [36;1m$arp | Select-Object DisplayName, DisplayVersion, Publisher, InstallLocation, PSChildName | Format-List[0m
+2026-11-17T17:53:12.9281992Z [36;1mif (-not (Test-Path "$env:LOCALAPPDATA\Akev")) { throw 'Not installed to %LocalAppData%\Akev' }[0m
+2026-11-17T17:53:12.9282569Z [36;1mGet-ChildItem "$env:LOCALAPPDATA\Akev" | Format-Table Name, Length[0m
+2026-11-17T17:53:12.9283010Z [36;1mwinget list --name Akev --accept-source-agreements[0m
+2026-11-17T17:53:12.9354322Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-17T17:53:12.9354674Z env:
+2026-11-17T17:53:12.9354861Z   MANIFEST: winget\manifests\a\Akev\Akev
+2026-11-17T17:53:12.9355312Z   MANIFEST_DIR: D:\a\chocolatey-packages\chocolatey-packages\winget\manifests\a\Akev\Akev\0.1.0
+2026-11-17T17:53:12.9355750Z ##[endgroup]
+2026-11-17T17:53:13.3578707Z Enabled admin setting 'LocalManifestFiles'.
+2026-11-17T17:53:13.5149634Z Found Akev [Akev.Akev] Version 0.1.0
+2026-11-17T17:53:13.5150117Z This application is licensed to you by its owner.
+2026-11-17T17:53:13.5150606Z Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+2026-11-17T17:53:13.5505994Z Downloading https://github.com/akevdev/akev/releases/download/v0.1.0/Akev_0.1.0_x64-setup.exe
+2026-11-17T17:53:15.1239799Z Successfully verified installer hash
+2026-11-17T17:53:16.2107510Z Starting package install...
+2026-11-17T18:03:20.4757171Z ##[error]The action 'Install with winget' has timed out after 10 minutes.
+2026-11-17T18:03:20.6541957Z ##[group]Run Get-Process | Where-Object { $_.ProcessName -match 'akev|setup|winget|WindowsPackageManager|MicrosoftEdgeWebview|nsis' } |
+2026-11-17T18:03:20.6544381Z [36;1mGet-Process | Where-Object { $_.ProcessName -match 'akev|setup|winget|WindowsPackageManager|MicrosoftEdgeWebview|nsis' } |[0m
+2026-11-17T18:03:20.6551354Z [36;1m  Format-Table ProcessName, Id, StartTime, Path -AutoSize | Out-String -Width 300[0m
+2026-11-17T18:03:20.6552989Z [36;1m$dir = "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir"[0m
+2026-11-17T18:03:20.6554482Z [36;1mGet-ChildItem $dir -ErrorAction SilentlyContinue | Sort-Object LastWriteTime | Select-Object -Last 2 |[0m
+2026-11-17T18:03:20.6555609Z [36;1m  ForEach-Object { "== $($_.Name)"; Get-Content $_.FullName -Tail 80 }[0m
+2026-11-17T18:03:20.6558011Z [36;1mGet-ItemProperty 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}' -ErrorAction SilentlyContinue |[0m
+2026-11-17T18:03:20.6559430Z [36;1m  Select-Object pv, name | Format-List[0m
+2026-11-17T18:03:20.6672069Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-17T18:03:20.6672804Z env:
+2026-11-17T18:03:20.6673227Z   MANIFEST: winget\manifests\a\Akev\Akev
+2026-11-17T18:03:20.6674162Z   MANIFEST_DIR: D:\a\chocolatey-packages\chocolatey-packages\winget\manifests\a\Akev\Akev\0.1.0
+2026-11-17T18:03:20.6675085Z ##[endgroup]
+2026-11-17T18:03:21.2930129Z 
+2026-11-17T18:03:21.3106342Z == WinGet-2026-11-17-17-53-13.323.log
+2026-11-17T18:03:21.3178703Z 2026-11-17 17:53:13.326 <I> [CORE] WinGet, version [1.29.380], activity [{FAC43E40-F9BB-41FA-A3C7-3440CDBB3073}]
+2026-11-17T18:03:21.3180529Z 2026-11-17 17:53:13.326 <I> [CORE] Process: winget.exe[8212], Level[1], Offset: 00007FFD498D0000
+2026-11-17T18:03:21.3181673Z 2026-11-17 17:53:13.326 <I> [CORE] OS: Windows.Server v10.0.26100.33674
+2026-11-17T18:03:21.3186382Z 2026-11-17 17:53:13.326 <I> [CORE] Command line Args: "C:\Users\runneradmin\AppData\Local\Microsoft\WindowsApps\winget.exe" settings --enable LocalManifestFiles
+2026-11-17T18:03:21.3188288Z 2026-11-17 17:53:13.326 <I> [CORE] Package: Microsoft.DesktopAppInstaller v1.29.380.0
+2026-11-17T18:03:21.3189612Z 2026-11-17 17:53:13.326 <I> [CORE] IsCOMCall:0; Caller: winget-cli
+2026-11-17T18:03:21.3191969Z 2026-11-17 17:53:13.334 <I> [CLI ] WinGet invoked with arguments: 'settings' '--enable' 'LocalManifestFiles'
+2026-11-17T18:03:21.3193171Z 2026-11-17 17:53:13.334 <I> [CLI ] Found subcommand: settings
+2026-11-17T18:03:21.3195237Z 2026-11-17 17:53:13.334 <I> [CLI ] Leaf command to execute: root:settings
+2026-11-17T18:03:21.3197070Z 2026-11-17 17:53:13.339 <I> [CLI ] Executing command: settings
+2026-11-17T18:03:21.3199066Z 2026-11-17 17:53:13.357 <I> [CLI ] Leaf command succeeded: root:settings
+2026-11-17T18:03:21.3203810Z == WinGet-2026-11-17-17-53-13.480.log
+2026-11-17T18:03:21.3219708Z 2026-11-17 17:53:16.178 <V> [REPO] Skipping {9C30FAF9-2839-49B9-8B79-4B919EC36B22} because it is a SystemComponent
+2026-11-17T18:03:21.3221255Z 2026-11-17 17:53:16.178 <V> [REPO] Skipping {9F7D5D8E-6012-B0D1-508E-B97A2E661EC4} because it is a SystemComponent
+2026-11-17T18:03:21.3224631Z 2026-11-17 17:53:16.178 <V> [REPO] Skipping {A104C886-78AE-4A4F-BD8F-53C636221ABF} because it is a SystemComponent
+2026-11-17T18:03:21.3226107Z 2026-11-17 17:53:16.178 <V> [REPO] Skipping {A18D4C2A-07A8-40E4-9797-DD324E6EA4FC} because it is a SystemComponent
+2026-11-17T18:03:21.3227734Z 2026-11-17 17:53:16.178 <V> [REPO] Skipping {A1B3147F-3C9C-4961-9DEE-B8BDA06564C0} because it is a SystemComponent
+2026-11-17T18:03:21.3229857Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {A1BFFE40-9AF3-253F-31EA-AD4E8E364B6D} because it is a SystemComponent
+2026-11-17T18:03:21.3232533Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {A3039020-C786-B9C3-4E3D-59367928F228} because it is a SystemComponent
+2026-11-17T18:03:21.3237709Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {A304E528-86BF-476D-AEED-72B7D88CA4BC} because it is a SystemComponent
+2026-11-17T18:03:21.3239233Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {A3FA1FD6-15C0-3EA2-75EF-69436BB9E130} because it is a SystemComponent
+2026-11-17T18:03:21.3240628Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {A4EA9EE5-7CFF-4C5F-B159-B9B4E5D2BDE2} because it is a SystemComponent
+2026-11-17T18:03:21.3242037Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {A56553DF-5CA0-ADD9-8782-5BC53738E118} because it is a SystemComponent
+2026-11-17T18:03:21.3243727Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {A8CC45FD-E295-48EB-A4B9-00D322B46096} because it is a SystemComponent
+2026-11-17T18:03:21.3245237Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {AAF8E6F9-9D47-7FD6-F3CE-7758DA6CD869} because it is a SystemComponent
+2026-11-17T18:03:21.3246795Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {B11AE338-9486-47B9-833E-54A7717D421A} because it is a SystemComponent
+2026-11-17T18:03:21.3248767Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {B2E8D471-884F-4A33-958E-BBAC5A1DE9D4} because it is a SystemComponent
+2026-11-17T18:03:21.3250935Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {B3A95BF5-1BDD-3AE2-0FFF-35336BF25606} because it is a SystemComponent
+2026-11-17T18:03:21.3253011Z 2026-11-17 17:53:16.179 <V> [REPO] Skipping {B517DBD3-B542-4FC8-9957-FFB2C3E65D1D} because it is a SystemComponent
+2026-11-17T18:03:21.3255206Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {B5457B14-37D3-3BA2-72B3-5D724A0ECEDE} because it is a SystemComponent
+2026-11-17T18:03:21.3257430Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {B5A87EE5-0C95-5269-BEA8-9A8F36DEBD10} because it is a SystemComponent
+2026-11-17T18:03:21.3259544Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {B641D58F-EBA3-4774-8FA1-69EBE8F2007D} because it is a SystemComponent
+2026-11-17T18:03:21.3261354Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {B6E31D6A-BE34-45C1-9C94-3BD052071273} because it is a SystemComponent
+2026-11-17T18:03:21.3263548Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {B7992E32-77BA-4DA5-AE7F-08C157BA4402} because it is a SystemComponent
+2026-11-17T18:03:21.3265885Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {B7AAA66E-8A3C-46F8-8412-286B10A63DFC} because it is a SystemComponent
+2026-11-17T18:03:21.3267280Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {BA1407DA-AEF4-D4EB-AA0A-19A8CE1B6F16} because it is a SystemComponent
+2026-11-17T18:03:21.3269052Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {BAAF5851-0759-422D-A1E9-90061B597188} because it is a SystemComponent
+2026-11-17T18:03:21.3270064Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {BBC48EDC-C71B-FC87-D95A-70DF1F278A3B} because it is a SystemComponent
+2026-11-17T18:03:21.3271912Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {BD324FBB-1812-D6FF-B07A-C1A6E0F96F7D} because it is a SystemComponent
+2026-11-17T18:03:21.3272921Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {BDF8C840-5B9A-4D9B-9BCA-CE4163973563} because it is a SystemComponent
+2026-11-17T18:03:21.3274820Z 2026-11-17 17:53:16.180 <V> [REPO] Skipping {BE00F49A-2FA1-46E6-B30F-A2653BF7CD75} because it is a SystemComponent
+2026-11-17T18:03:21.3276120Z 2026-11-17 17:53:16.181 <V> [REPO] Skipping {C075DEA9-7BB6-E24B-A6A2-5097B8C35464} because it is a SystemComponent
+2026-11-17T18:03:21.3277863Z 2026-11-17 17:53:16.181 <V> [REPO] Adding manifest for [ARP\Machine\X86\{C0A2B576-1630-4449-93B8-06C8FBBAF369}, 17.1.37110] at relative path []
+2026-11-17T18:03:21.3278875Z 2026-11-17 17:53:16.181 <V> [REPO] Did not find an Id { ARP\Machine\X86\{C0A2B576-1630-4449-93B8-06C8FBBAF369} }
+2026-11-17T18:03:21.3280742Z 2026-11-17 17:53:16.182 <V> [REPO] Adding manifest for [ARP\Machine\X86\{c0b93b80-d0a4-47fc-a4d1-21a4008a63ca}, 10.1.26100.7705] at relative path []
+2026-11-17T18:03:21.3281778Z 2026-11-17 17:53:16.182 <V> [REPO] Did not find an Id { ARP\Machine\X86\{c0b93b80-d0a4-47fc-a4d1-21a4008a63ca} }
+2026-11-17T18:03:21.3283689Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C2595DA0-9477-A724-A5B4-44A89D30897A} because it is a SystemComponent
+2026-11-17T18:03:21.3286339Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C48EA765-34BB-3C3A-8DEF-020444411BF0} because it is a SystemComponent
+2026-11-17T18:03:21.3287247Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C49E181B-C19F-4A1F-BE76-D463E7E3B2B5} because it is a SystemComponent
+2026-11-17T18:03:21.3437447Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C49F2ED9-A19B-4D79-BEFC-686FEB8BA149} because it is a SystemComponent
+2026-11-17T18:03:21.3439044Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C756420B-C91C-4410-8092-F49C24CEF594} because it is a SystemComponent
+2026-11-17T18:03:21.3441121Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C8023D3F-F555-432F-80D1-BC6D875790DE} because it is a SystemComponent
+2026-11-17T18:03:21.3443007Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C80951BD-6904-474F-BBC5-03A6C777F37C} because it is a SystemComponent
+2026-11-17T18:03:21.3445394Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C80FB5D6-AC12-63FD-7BE4-98118492B36D} because it is a SystemComponent
+2026-11-17T18:03:21.3447055Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {C8891AD2-C223-45CD-A9BE-617A68923B61} because it is a SystemComponent
+2026-11-17T18:03:21.3449085Z 2026-11-17 17:53:16.183 <V> [REPO] Skipping {CCA39F48-DBB2-132A-7992-A452AA75EE5B} because it is a SystemComponent
+2026-11-17T18:03:21.3450931Z 2026-11-17 17:53:16.184 <V> [REPO] Adding manifest for [ARP\Machine\X86\{CE07BE71-510D-414A-92D4-DFF47631848A}, 1.12.12] at relative path []
+2026-11-17T18:03:21.3452635Z 2026-11-17 17:53:16.184 <V> [REPO] Did not find an Id { ARP\Machine\X86\{CE07BE71-510D-414A-92D4-DFF47631848A} }
+2026-11-17T18:03:21.3455006Z 2026-11-17 17:53:16.184 <V> [REPO] Skipping {CEB8ED19-EFAD-3612-A6CE-EE68263B10AF} because it is a SystemComponent
+2026-11-17T18:03:21.3457339Z 2026-11-17 17:53:16.185 <V> [REPO] Adding manifest for [ARP\Machine\X86\{cef0d74c-33bc-432b-941f-6e17bea1f9d3}, 1.2.896.0] at relative path []
+2026-11-17T18:03:21.3459028Z 2026-11-17 17:53:16.185 <V> [REPO] Did not find an Id { ARP\Machine\X86\{cef0d74c-33bc-432b-941f-6e17bea1f9d3} }
+2026-11-17T18:03:21.3460572Z 2026-11-17 17:53:16.185 <V> [REPO] Skipping {CF2F6E51-AA4C-4779-A77A-86F16D6E3218} because it is a SystemComponent
+2026-11-17T18:03:21.3463017Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {CFBB41CD-858A-4AEB-BFD7-34780D2FA2E9} because it is a SystemComponent
+2026-11-17T18:03:21.3465328Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {D108F8C6-2E33-53DE-E6B5-7ECAD00CB834} because it is a SystemComponent
+2026-11-17T18:03:21.3467868Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {D23E482E-DB9A-7C2E-78BC-F0A8D1FF401A} because it is a SystemComponent
+2026-11-17T18:03:21.3470078Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {D4326770-A6EC-4709-A8D1-0854E555035D} because it is a SystemComponent
+2026-11-17T18:03:21.3472301Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {D58B9B8C-86C6-A0B1-9455-A63374A71B75} because it is a SystemComponent
+2026-11-17T18:03:21.3474227Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {DF7A47A1-DD77-C163-8B1C-59F39B587932} because it is a SystemComponent
+2026-11-17T18:03:21.3475761Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {E15748CF-C6DD-02DF-2FB7-B0D6DDE179C0} because it is a SystemComponent
+2026-11-17T18:03:21.3477541Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {E22B6C8C-1B15-4324-B5B6-283F51AA1948} because it is a SystemComponent
+2026-11-17T18:03:21.3478592Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {E37CC245-4D0F-0663-5CCA-29C1C05F12E2} because it is a SystemComponent
+2026-11-17T18:03:21.3480183Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {E4445DE5-29F0-8442-F9CF-024BFC237F5F} because it is a SystemComponent
+2026-11-17T18:03:21.3481314Z 2026-11-17 17:53:16.186 <V> [REPO] Skipping {E51299F3-4186-3F12-ACBC-5D7DE6095969} because it is a SystemComponent
+2026-11-17T18:03:21.3482910Z 2026-11-17 17:53:16.187 <V> [REPO] Skipping {E5B61001-CAE9-4667-AC0D-0B0FFCE995C3} because it is a SystemComponent
+2026-11-17T18:03:21.3484564Z 2026-11-17 17:53:16.187 <V> [REPO] Skipping {EC073C7E-990D-4BB1-BFA9-45C6704E3571} because it is a SystemComponent
+2026-11-17T18:03:21.3486606Z 2026-11-17 17:53:16.187 <V> [REPO] Skipping {ECC668B0-7BAD-63A1-2F07-9BFB2422285E} because it is a SystemComponent
+2026-11-17T18:03:21.3487858Z 2026-11-17 17:53:16.187 <V> [REPO] Skipping {EDC103FC-C084-43B2-B558-98790C616C15} because it is a SystemComponent
+2026-11-17T18:03:21.3489835Z 2026-11-17 17:53:16.187 <V> [REPO] Skipping {EEECB382-9A53-DA0C-736D-74BBB0C3175A} because it is a SystemComponent
+2026-11-17T18:03:21.3491298Z 2026-11-17 17:53:16.187 <V> [REPO] Skipping {EF0C772D-F5E3-36D0-BDAB-FD378533CD40} because it is a SystemComponent
+2026-11-17T18:03:21.3492834Z 2026-11-17 17:53:16.187 <V> [REPO] Adding manifest for [ARP\Machine\X86\{ef6b00ec-13e1-4c25-9064-b2f383cb8412}, 12.0.40660.0] at relative path []
+2026-11-17T18:03:21.3494059Z 2026-11-17 17:53:16.187 <V> [REPO] Did not find an Id { ARP\Machine\X86\{ef6b00ec-13e1-4c25-9064-b2f383cb8412} }
+2026-11-17T18:03:21.3495625Z 2026-11-17 17:53:16.188 <V> [REPO] Skipping {F082D9A3-413C-D9DB-845C-03D337790265} because it is a SystemComponent
+2026-11-17T18:03:21.3496733Z 2026-11-17 17:53:16.188 <V> [REPO] Skipping {F5E3C41A-DB6E-4B5E-B884-C6262685C91F} because it is a SystemComponent
+2026-11-17T18:03:21.3498304Z 2026-11-17 17:53:16.188 <V> [REPO] Skipping {F6E4F431-4A50-4822-A71E-CC17E087BDB7} because it is a SystemComponent
+2026-11-17T18:03:21.3500840Z 2026-11-17 17:53:16.188 <V> [REPO] Skipping {FA8ADA03-D867-E798-C0BA-98A57E90737D} because it is a SystemComponent
+2026-11-17T18:03:21.3502411Z 2026-11-17 17:53:16.189 <V> [REPO] Skipping {FDA5F591-B2CA-4B4D-A0CE-931AB8B5834E} because it is a SystemComponent
+2026-11-17T18:03:21.3504499Z 2026-11-17 17:53:16.189 <I> [REPO] Reading MSI UpgradeCodes
+2026-11-17T18:03:21.3505771Z 2026-11-17 17:53:16.199 <V> [CORE] Subkey 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall' was not found
+2026-11-17T18:03:21.3507511Z 2026-11-17 17:53:16.200 <V> [REPO]  ... finished creating PredefinedInstalledSource
+2026-11-17T18:03:21.3508814Z 2026-11-17 17:53:16.201 <V> [REPO] Performing search: Query:[none]
+2026-11-17T18:03:21.3510114Z 2026-11-17 17:53:16.210 <I> [CLI ] Installer args: /S
+2026-11-17T18:03:21.3512173Z 2026-11-17 17:53:16.210 <I> [CLI ] Starting: 'C:\Users\runneradmin\AppData\Local\Temp\WinGet\Akev.Akev.0.1.0\Akev_0.1.0_x64-setup.exe' with arguments '/S'
+2026-11-17T18:03:21.3611306Z 
+2026-11-17T18:03:21.3618675Z [32;1mpv   : [0m156.0.4314.58
+2026-11-17T18:03:21.3619475Z [32;1mname : [0mMicrosoft Edge WebView2 Runtime
+2026-11-17T18:03:21.3619986Z 
+2026-11-17T18:03:21.5934716Z Post job cleanup.
+2026-11-17T18:03:21.9924706Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-17T18:03:22.0273749Z git version 2.56.0.windows.4
+2026-11-17T18:03:22.0347407Z Temporarily overriding HOME='D:\a\_temp\95521b33-f7cd-4c6a-b112-4d5b041a0a59' before making global git config changes
+2026-11-17T18:03:22.0348337Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-17T18:03:22.0357857Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\chocolatey-packages\chocolatey-packages
+2026-11-17T18:03:22.0748152Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-17T18:03:22.1140521Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-17T18:03:22.6699224Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-17T18:03:22.7028450Z http.https://github.com/.extraheader
+2026-11-17T18:03:22.7071760Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-17T18:03:22.7443869Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-17T18:03:23.3074268Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-17T18:03:23.3462766Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-17T18:03:23.9469828Z Cleaning up orphan processes
+2026-11-17T18:03:24.0239624Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

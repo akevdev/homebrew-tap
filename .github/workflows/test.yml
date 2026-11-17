@@ -1,0 +1,41 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  style:
+    runs-on: macos-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - run: brew style akevdev/tap
+      - run: brew audit --strict --online --tap akevdev/tap
+
+  formula:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, macos-15-intel, ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - run: brew install akevdev/tap/akev
+      - run: brew test akevdev/tap/akev
+      - run: akev --version
+      - run: brew uninstall akevdev/tap/akev
+
+  cask:
+    runs-on: macos-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - run: brew install --cask akevdev/tap/akev-desktop
+      - run: ls -la /Applications/Akev.app/Contents/MacOS/
+      - run: codesign -dv /Applications/Akev.app 2>&1 | head -5 || true
+      - run: brew uninstall --cask akevdev/tap/akev-desktop
+      - run: test ! -e /Applications/Akev.app

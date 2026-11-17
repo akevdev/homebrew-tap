@@ -6,7 +6,7 @@ cask "akev-desktop" do
   url "https://github.com/akevdev/akev/releases/download/v#{version}/Akev_#{version}_universal.dmg"
   name "Akev"
   desc "Fast HTTP(S) debugging proxy: intercept, inspect, mock and replay traffic"
-  homepage "https://akev.dev"
+  homepage "https://akev.dev/"
 
   livecheck do
     url :url
@@ -15,7 +15,7 @@ cask "akev-desktop" do
 
   # The app updates itself (signed packages, after the user confirms).
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Akev.app"
 
@@ -27,4 +27,9 @@ cask "akev-desktop" do
     "~/Library/Saved Application State/dev.akev.desktop.savedState",
     "~/Library/WebKit/dev.akev.desktop",
   ]
+
+  caveats <<~EOS
+    Akev isn't notarized by Apple yet, so macOS asks before the first launch:
+    open Akev once, then click "Open Anyway" in System Settings > Privacy & Security.
+  EOS
 end

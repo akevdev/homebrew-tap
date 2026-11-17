@@ -15,8 +15,10 @@ jobs:
     runs-on: macos-15-intel
     steps:
       - uses: Homebrew/actions/setup-homebrew@main
-      - run: brew style akevdev/tap
-      - run: brew audit --strict --online --tap akevdev/tap
+      # The formula picks a prebuilt binary per OS (url inside on_macos/on_linux). That works,
+      # but homebrew-core's style only allows it in resources, so that one cop is skipped.
+      - run: brew style --except-cops=FormulaAudit/ComponentsOrder akevdev/tap
+      - run: brew audit --strict --online --skip-style --tap akevdev/tap
 
   formula:
     strategy:

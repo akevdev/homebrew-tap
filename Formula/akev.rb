@@ -2,7 +2,6 @@
 class Akev < Formula
   desc "Fast HTTP(S) debugging proxy: intercept, inspect, mock and replay traffic"
   homepage "https://akev.dev"
-  version "0.1.0"
   license "AGPL-3.0-or-later"
 
   on_macos do

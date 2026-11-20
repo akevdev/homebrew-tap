@@ -1,7 +1,7 @@
 # Homebrew cask for the Akev desktop app (rendered by scripts/package-manifests.sh).
 cask "akev-desktop" do
-  version "0.1.0"
-  sha256 "2253f427771d341416e50265f72c0a912b04a0f4e3a67e1b6b71bc97f7fc03a4"
+  version "0.1.1"
+  sha256 "218a6df467cf5e6384cb400f5b96b48e7e6c3e6b22f323fa61d28f96ded849b6"
 
   url "https://github.com/akevdev/akev/releases/download/v#{version}/Akev_#{version}_universal.dmg"
   name "Akev"

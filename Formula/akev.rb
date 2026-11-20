@@ -5,18 +5,18 @@ class Akev < Formula
   license "AGPL-3.0-or-later"
 
   on_macos do
-    url "https://github.com/akevdev/akev/releases/download/v0.1.0/akev-0.1.0-universal-apple-darwin.tar.gz"
-    sha256 "6283c632c71bdb972cf02baeedf71792db5242c1fc19e555425715111f652e89"
+    url "https://github.com/akevdev/akev/releases/download/v0.1.1/akev-0.1.1-universal-apple-darwin.tar.gz"
+    sha256 "198bf7e945296f61c37ed2d5a87e6a5024a964edad097eeb6d2e10bde1a61de9"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/akevdev/akev/releases/download/v0.1.0/akev-0.1.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b67e154d5ba413b0da4e5fa18ceb28e4a79aff1cbe84afc1eadb6ce85ff91822"
+      url "https://github.com/akevdev/akev/releases/download/v0.1.1/akev-0.1.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4849b23ace8d5f027770b93f51859c45bbf4299f28a8036175753f5aca7a88ec"
     end
     on_arm do
-      url "https://github.com/akevdev/akev/releases/download/v0.1.0/akev-0.1.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c7ceb77e7465523f0accaf6e8c33ad2a46b55b98e7aae39e1fd759a2172ac2a8"
+      url "https://github.com/akevdev/akev/releases/download/v0.1.1/akev-0.1.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "86575afbf99a0c342fd17424adadc2abcb0e01b6b73febf14800bbe32cbd1d43"
     end
   end
 
